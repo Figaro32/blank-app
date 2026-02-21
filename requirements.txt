@@ -1,1 +1,6 @@
-streamlit
+streamlit>=1.28.0
+
+# Add as needed for each tool:
+# pandas
+# py3Dmol  # structure visualization
+# biopython
