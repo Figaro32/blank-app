@@ -1,0 +1,96 @@
+/* Bioinformatics Portal - Custom Styles */
+
+/* Hide Streamlit branding */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+header { visibility: hidden; }
+
+/* Main content padding and max-width for readability */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* Tool cards - Tamarind-style grid */
+.tool-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tool-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #0ea5e9;
+}
+
+.tool-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.tool-card-desc {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.tool-card-category {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+}
+
+/* Responsive grid for tool cards */
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    padding-top: 1.5rem;
+}
+
+[data-testid="stSidebar"] .stMarkdown {
+    font-size: 0.95rem;
+}
+
+/* Progress and status areas */
+[data-testid="stProgress"] {
+    margin: 0.5rem 0;
+}
+
+/* File uploader area */
+[data-testid="stFileUploader"] {
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: #0ea5e9;
+}
+
+/* Mobile-friendly base font */
+@media (max-width: 768px) {
+    .main .block-container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
+}

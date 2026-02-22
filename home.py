@@ -3,16 +3,10 @@ Main entry point. Run with: streamlit run home.py
 """
 import streamlit as st
 
-st.set_page_config(page_title="Protein Design Suite", page_icon="🧬", layout="wide")
+from components.home_content import render_home_content
+from utils.helpers import init_page
 
-st.title("🧬 Protein Design Suite")
-st.markdown("""
-Welcome! Use the **sidebar** to navigate to each tool:
+st.set_page_config(page_title="Bioinformatics Portal", page_icon="🧬", layout="wide")
 
-- **Home** – Overview of all tools
-- **RFdiffusion3** – Structure generation
-- **AlphaFold-like** – Structure prediction (coming soon)
-- **ProteinMPNN** – Sequence design
-- **Molecular Docking** – Docking workflows
-- **ADMET Prediction** – Drug-likeness properties
-""")
+init_page()
+render_home_content()
